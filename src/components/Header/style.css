@@ -1,8 +1,10 @@
 .header {
-    background-color: red;
+    background-color:dodgerblue;
     height: 100px;
     width: 100%;
     color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    overflow: scroll;
 }
 
 .page-name {
