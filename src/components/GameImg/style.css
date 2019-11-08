@@ -6,4 +6,10 @@ img {
 .card {
     height: 18rem;
     width: 18rem;
+    padding: 20px;
+    float: left;
+    margin: 30px;
+    border: 2px gray solid
+
 }
+

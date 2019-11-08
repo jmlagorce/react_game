@@ -28,11 +28,16 @@ class App extends Component {
       highScore = {this.state.highScore}
       />
       <Jumbo />
+
+      {this.state.images.map(
+        (image) => 
+
+  
       <GameImg 
-      image = {this.state.images}
+      image = {image}
       myFunc = {this.clicked}
-      
       />
+  )}
       
     
     </div>
