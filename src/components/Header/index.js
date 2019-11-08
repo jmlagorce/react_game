@@ -1,14 +1,14 @@
 import React from 'react';
 import "./style.css"
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div className="header">
-            <h1 className="page-name">Clicky Game</h1>
-            <h1 className="instructions">Click an image to begin!</h1>
-            <h1 className="score">Score: </h1>
+            <h2 className="page-name">Clicky Game</h2>
+            <h2 className="instructions">Click an image to begin!</h2>
+            <h2 className="score">Score: {props.score}</h2>
             
-            <h1 className="best-score">Best Score: </h1>
+            <h2 className="best-score">Best Score: {props.highScore}</h2>
         </div>
     );
 };

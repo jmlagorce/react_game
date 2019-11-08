@@ -3,13 +3,13 @@ import './style.css'
 
 const Gameimg = (props) => {
     return (
-        <div>
-            <div class="card">
-                <img class="card-img-top" src="holder.js/100x180/" alt=""></img>
+        
+            <div className="card">
+                <img onClick={props.myFunc} data-id={props.image.id} className="card-img-top" src={props.image.image} alt=""></img>
                 
             </div>
 
-        </div>
+        
         
         
     );
