@@ -2,11 +2,10 @@
 import React, { Component } from 'react';
 import Header from './components/Header'
 import Jumbo from './components/Jumbo'
-import Container from './components/Container'
 import GameImg from './components/GameImg'
 import images from './images.json'
 import './App.css';
-import { directive } from '@babel/types';
+
 
 class App extends Component {
   state = {
@@ -16,9 +15,24 @@ class App extends Component {
     clickedImages: []
   
   }
-  clicked = (event) => {
-    console.log(event.target.dataset.id)
+  clickedSuccesful = (event) => {
+    //old clicked get the value of clickedImages
+    let newClickedImages = this.state.clickedImages
+
+    
+    //new clicked images , added the clicked value
+    newClickedImages.push(event.target.dataset.id)
+    //replace clicked images with the new clicked images array
+    this.setState({clickedImages: newClickedImages})
+    console.log(this.state.clickedImages)
   }
+
+  pointGiven = () => {
+    this.setState({score: this.state.score + 1})
+  }
+
+  
+
   render(){
   return (
     
@@ -35,7 +49,8 @@ class App extends Component {
   
       <GameImg 
       image = {image}
-      myFunc = {this.clicked}
+      myFunc = {this.clickedSuccesful}
+      pointGiven = {this.pointGiven}
       />
   )}
       
